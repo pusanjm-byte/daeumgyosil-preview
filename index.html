@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>다음교실 | 부산 학원·교습소 자리 전문</title>
+<meta name="description" content="학원·교습소 자리만 봅니다. 계약 전에 학원이 될 수 있는 자리인지부터 확인하는 부산 학원·교습소 전문 다음교실.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--ink:#121A20;--ink2:#1F2B33;--or:#E35F2A;--or2:#FF8A5B;--cream:#F4EEE2;--paper:#FAF6EE;--line:#E3DACB;--mute:#6E6B63;--ok:#2E8B57}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,system-ui,sans-serif;color:var(--ink2);background:var(--paper);word-break:keep-all;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s}
+header.on{background:rgba(250,246,238,.9);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{display:flex;align-items:center;gap:12px}
+.mark{width:38px;height:38px;border-radius:11px;background:var(--ink2);display:grid;place-items:center}
+.mark svg{width:22px;height:22px}
+.logo b{font-size:21px;font-weight:900;letter-spacing:-.6px;display:block;line-height:1.1}
+.logo small{font-size:11.5px;color:var(--mute);font-weight:600;letter-spacing:.2px}
+.menu{display:flex;gap:38px;font-size:15px;font-weight:600}
+.menu a{position:relative;padding:6px 0}
+.menu a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--or);transition:width .3s}
+.menu a:hover:after{width:100%}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:700;font-size:14.5px;transition:transform .2s,box-shadow .2s,background .2s}
+.pill.dark{background:var(--ink2);color:#fff}
+.pill.or{background:var(--or);color:#fff;box-shadow:0 10px 26px rgba(227,95,42,.28)}
+.pill.ghost{border:1.5px solid var(--ink2)}
+.pill:hover{transform:translateY(-2px)}
+/* hero */
+.hero{position:relative;padding:170px 0 110px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 520px at 85% 30%,rgba(227,95,42,.10),transparent 60%),radial-gradient(700px 400px at 0% 100%,rgba(31,43,51,.06),transparent 60%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;color:var(--or);background:#fff;border:1px solid var(--line);padding:8px 14px 8px 10px;border-radius:999px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--or);box-shadow:0 0 0 5px rgba(227,95,42,.15)}
+.hero h1{margin-top:26px;font-size:76px;line-height:1.12;font-weight:850;letter-spacing:-3px;color:var(--ink)}
+.hero h1 .u{position:relative;display:inline-block;color:var(--or)}
+.hero h1 .u:after{content:"";position:absolute;left:0;right:0;bottom:6px;height:14px;background:rgba(227,95,42,.16);z-index:-1;border-radius:4px}
+.hero p.sub{margin-top:26px;font-size:19px;color:var(--mute);max-width:520px}
+.hero .cta{margin-top:38px;display:flex;gap:12px;flex-wrap:wrap}
+.hero .cta .pill{padding:16px 26px;font-size:16px}
+.trust{margin-top:44px;display:flex;gap:28px;font-size:14px;color:var(--mute)}
+.trust b{display:block;font-size:22px;color:var(--ink);font-weight:850;letter-spacing:-.5px}
+/* hero visual */
+.vis{position:relative;height:560px}
+.board{position:absolute;inset:20px 0 40px 30px;background:var(--ink2);border-radius:30px;box-shadow:0 40px 80px rgba(18,26,32,.25);overflow:hidden}
+.board:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(244,238,226,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(244,238,226,.06) 1px,transparent 1px);background-size:32px 32px}
+.board svg{position:absolute;inset:40px 40px 70px 40px;width:calc(100% - 80px);height:calc(100% - 110px)}
+.draw{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s .3s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.board .cap{position:absolute;left:40px;bottom:26px;font-size:12px;color:rgba(244,238,226,.55);letter-spacing:.5px}
+.chk{position:absolute;background:#fff;border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 40px rgba(18,26,32,.18);font-weight:700;font-size:15px;opacity:0;transform:translateY(16px) scale(.96);animation:pop .6s ease forwards}
+.chk span{width:30px;height:30px;border-radius:50%;background:var(--ok);display:grid;place-items:center;flex:none}
+.chk span svg{width:16px;height:16px}
+.chk small{display:block;font-size:12px;color:var(--mute);font-weight:500}
+.c1{left:-10px;top:70px;animation-delay:1.2s}.c2{right:-20px;top:170px;animation-delay:1.5s}.c3{left:20px;bottom:120px;animation-delay:1.8s}.c4{right:10px;bottom:20px;animation-delay:2.1s}
+@keyframes pop{to{opacity:1;transform:none}}
+.float1{animation:pop .6s ease forwards,bob 5s 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+/* marquee */
+.mq{background:var(--ink);color:var(--cream);overflow:hidden;padding:22px 0;white-space:nowrap}
+.mq div{display:inline-flex;gap:56px;animation:mq 28s linear infinite;font-size:22px;font-weight:800;letter-spacing:-.3px}
+.mq div span{display:inline-flex;align-items:center;gap:56px}
+.mq div span:after{content:"";width:8px;height:8px;border-radius:50%;background:var(--or)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+section.s{padding:140px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.eb{font-size:13px;font-weight:800;letter-spacing:2px;color:var(--or)}
+h2{margin-top:14px;font-size:50px;line-height:1.2;font-weight:850;letter-spacing:-2px;color:var(--ink)}
+.lead{font-size:18px;color:var(--mute);max-width:460px}
+/* why */
+.why{margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.wcard{position:relative;background:#fff;border-radius:28px;padding:44px 36px 40px;border:1px solid var(--line);transition:transform .35s,box-shadow .35s;overflow:hidden}
+.wcard:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(18,26,32,.10)}
+.wcard .no{font-size:64px;font-weight:900;color:transparent;-webkit-text-stroke:1.5px var(--line);line-height:1;letter-spacing:-2px}
+.wcard h3{margin:22px 0 12px;font-size:25px;letter-spacing:-.8px}
+.wcard p{color:var(--mute);font-size:16px}
+.wcard .ic{position:absolute;right:30px;top:36px;width:54px;height:54px;border-radius:16px;background:rgba(227,95,42,.1);display:grid;place-items:center}
+.wcard .ic svg{width:26px;height:26px}
+.wcard.feat{background:var(--ink2);color:var(--cream);border-color:var(--ink2)}
+.wcard.feat p{color:rgba(244,238,226,.72)}.wcard.feat .no{-webkit-text-stroke-color:rgba(244,238,226,.25)}
+/* guide */
+.dark{background:var(--ink);color:var(--cream)}
+.dark h2{color:#fff}.dark .lead{color:rgba(244,238,226,.65)}
+.steps{margin-top:70px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st{position:relative;border-radius:26px;padding:34px 32px 30px;background:linear-gradient(160deg,rgba(244,238,226,.07),rgba(244,238,226,.02));border:1px solid rgba(244,238,226,.10);transition:border-color .3s,transform .3s;min-height:250px}
+.st:hover{border-color:rgba(227,95,42,.6);transform:translateY(-4px)}
+.st .num{display:flex;justify-content:space-between;align-items:center}
+.st .num b{font-size:13px;letter-spacing:2px;color:var(--or2)}
+.st .num i{font-style:normal;font-size:48px;font-weight:900;color:rgba(244,238,226,.08);line-height:1}
+.st h3{margin:10px 0 18px;font-size:27px;letter-spacing:-.8px;color:#fff}
+.st a{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid rgba(244,238,226,.10);font-size:15.5px;color:rgba(244,238,226,.86);transition:color .2s,padding .2s}
+.st a:hover{color:var(--or2);padding-left:4px}
+.st a:after{content:"↗";color:var(--or)}
+.src{margin-top:28px;font-size:13px;color:rgba(244,238,226,.5)}
+/* dayeon */
+.dy{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.phones{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ph{background:#0d1317;border-radius:30px;padding:8px;box-shadow:0 26px 50px rgba(18,26,32,.22);transition:transform .35s}
+.ph:nth-child(even){transform:translateY(40px)}
+.ph:hover{transform:translateY(-6px)}.ph:nth-child(even):hover{transform:translateY(34px)}
+.ph .scr{border-radius:23px;overflow:hidden;aspect-ratio:9/16;position:relative;background:#000}
+.ph iframe{width:100%;height:100%;border:0}
+.ph .d{position:absolute;left:10px;top:10px;background:var(--or);color:#fff;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;pointer-events:none}
+.ai{margin-top:22px;display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--mute);background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+/* process */
+.proc{margin-top:70px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;position:relative}
+.proc:before{content:"";position:absolute;left:5%;right:5%;top:36px;height:2px;background:repeating-linear-gradient(90deg,var(--or) 0 8px,transparent 8px 16px);opacity:.5}
+.pc{position:relative;text-align:center;padding:0 10px}
+.pc .dot{width:72px;height:72px;margin:0 auto;border-radius:50%;background:#fff;border:2px solid var(--line);display:grid;place-items:center;font-weight:900;font-size:20px;color:var(--or);transition:.3s}
+.pc:hover .dot{background:var(--or);color:#fff;border-color:var(--or)}
+.pc h4{margin:20px 0 8px;font-size:19px;letter-spacing:-.4px}
+.pc p{font-size:14.5px;color:var(--mute)}
+/* cta */
+.cta2{margin:0 40px 40px;border-radius:40px;background:var(--or);color:#fff;padding:90px 70px;position:relative;overflow:hidden}
+.cta2:before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:60px solid rgba(255,255,255,.08)}
+.cta2 .in{position:relative;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+.cta2 h2{color:#fff;margin:0;font-size:46px}
+.cta2 .pill{padding:18px 30px;font-size:17px}
+.cta2 .w{background:#fff;color:var(--or)}.cta2 .b{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+/* footer */
+footer{padding:60px 0 70px;font-size:14px;color:var(--mute)}
+footer .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;border-top:1px solid var(--line);padding-top:40px}
+footer b{color:var(--ink)}
+footer .links{display:flex;gap:22px;justify-content:flex-end;flex-wrap:wrap;font-weight:600;color:var(--ink2)}
+footer .sm{margin-top:18px;font-size:12.5px}
+/* floating */
+.fl{position:fixed;right:24px;bottom:24px;z-index:60;display:flex;flex-direction:column;gap:10px}
+.fl a{width:60px;height:60px;border-radius:20px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 12px 28px rgba(18,26,32,.14);transition:transform .2s}
+.fl a:hover{transform:translateY(-3px)}
+.fl a.o{background:var(--or);border-color:var(--or)}
+.fl svg{width:24px;height:24px}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:960px){
+ .wrap{padding:0 22px}.menu{display:none}.nav{height:70px}.nav .pill{display:none}
+ .hero{padding:120px 0 70px}.hero .wrap{grid-template-columns:1fr}
+ .hero h1{font-size:44px;letter-spacing:-1.6px}.hero p.sub{font-size:16.5px}
+ .vis{height:420px}.board{inset:10px 0 30px 10px}.chk{font-size:13.5px;padding:11px 14px}.c2{right:-6px}
+ .trust{gap:20px}.trust b{font-size:19px}
+ section.s{padding:90px 0}h2{font-size:32px;letter-spacing:-1.2px}
+ .why,.steps{grid-template-columns:1fr}.dy{grid-template-columns:1fr;gap:36px}
+ .phones{grid-template-columns:repeat(2,1fr)}.ph:nth-child(even){transform:translateY(24px)}
+ .proc{grid-template-columns:1fr;gap:26px}.proc:before{display:none}.pc{display:grid;grid-template-columns:64px 1fr;text-align:left;gap:16px;align-items:center}.pc .dot{width:60px;height:60px;margin:0}.pc h4{margin:0}
+ .cta2{margin:0 14px 20px;padding:60px 28px;border-radius:30px}.cta2 h2{font-size:30px}
+ footer .wrap{grid-template-columns:1fr}footer .links{justify-content:flex-start}
+ .mq div{font-size:18px}
+}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap nav">
+ <a class="logo" href="#"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#F4EEE2" stroke-width="2"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/><circle cx="18" cy="6" r="2.2" fill="#E35F2A" stroke="none"/></svg></span><span><b>다음교실</b><small>부산 학원·교습소 전문</small></span></a>
+ <nav class="menu"><a href="#why">다음교실은</a><a href="#guide">창업 가이드</a><a href="#dayeon">다연 시리즈</a><a href="#process">상담 안내</a></nav>
+ <a class="pill dark" href="tel:01049838916">상담 010-4983-8916</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="kicker rv"><i></i>부산 학원·교습소 전문 중개</span>
+  <h1 class="rv">학원·교습소<br>자리만 <span class="u">봅니다.</span></h1>
+  <p class="sub rv">계약하기 전에, 학원이 될 수 있는 자리인지부터 확인합니다. 건축물 용도와 교육청 기준, 진짜 들어가는 돈까지 원장님 입장에서 같이 봅니다.</p>
+  <div class="cta rv"><a class="pill or" href="tel:01049838916">전화 상담하기</a><a class="pill ghost" href="#guide">창업 가이드 보기</a></div>
+  <div class="trust rv"><div><b>학원·교습소</b>만 전문</div><div><b>6단계</b>계약 전 확인</div><div><b>부산</b>주요 학원가</div></div>
+ </div>
+ <div class="vis">
+  <div class="board">
+   <svg viewBox="0 0 480 380" fill="none" stroke="#E35F2A" stroke-width="2.4" stroke-linecap="round">
+    <path class="draw" d="M10 10H470V370H10Z"/>
+    <path class="draw" d="M10 220H270M270 10V370M270 150H470M140 220V370"/>
+    <path class="draw" style="animation-delay:1s" d="M190 220a34 34 0 0 1 34 34M270 80a30 30 0 0 0-30 30M370 150a30 30 0 0 1 30 30" stroke-opacity=".6"/>
+    <g font-family="Pretendard" font-size="15" font-weight="700" fill="#F4EEE2" fill-opacity=".8" stroke="none"><text x="100" y="120">강의실 A</text><text x="335" y="85">강의실 B</text><text x="345" y="270">상담실</text><text x="45" y="300">원장실</text><text x="185" y="300">로비</text></g>
+    <rect x="11" y="11" width="258" height="208" fill="#E35F2A" fill-opacity=".12" stroke="none"/>
+   </svg>
+   <div class="cap">설명용 그림 · 실제 도면 아님</div>
+  </div>
+  <div class="chk c1 float1"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><div>건축물 용도<small>제2종 근린생활시설(학원)</small></div></div>
+  <div class="chk c2"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><div>같은 건물 유해업소<small>노래연습장·유흥주점 등</small></div></div>
+  <div class="chk c3"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><div>강의실 면적<small>부산 기준 30㎡ 이상</small></div></div>
+  <div class="chk c4"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg></span><div>위반건축물 여부<small>건축물대장 맨 위 표시</small></div></div>
+ </div>
+</div></section>
+
+<div class="mq"><div><span>사직동</span><span>명륜동</span><span>거제동</span><span>정관</span><span>센텀·재송</span><span>마린시티</span><span>용호동</span><span>대연동</span><span>남천동</span><span>사직동</span><span>명륜동</span><span>거제동</span><span>정관</span><span>센텀·재송</span><span>마린시티</span><span>용호동</span><span>대연동</span><span>남천동</span></div></div>
+
+<section class="s" id="why"><div class="wrap">
+ <div class="head"><div><div class="eb rv">WHY DAEUM</div><h2 class="rv">학원 자리는<br>보는 눈이 달라야 합니다</h2></div><p class="lead rv">월세와 위치만 좋아서는 안 됩니다. 등록이 되는 건물인지, 강의실이 기준에 맞는지, 학생이 오가는 길인지까지 봐야 합니다.</p></div>
+ <div class="why">
+  <div class="wcard feat rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A5B" stroke-width="2"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></svg></div><div class="no">01</div><h3>학원·교습소만 합니다</h3><p>일반 상가·주택이 아니라 학원·교습소 자리만 전문으로 찾고 소개합니다.</p></div>
+  <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E35F2A" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div class="no">02</div><h3>계약 전에 기준부터</h3><p>건축물대장 용도, 유해업소, 위반건축물, 강의실 면적처럼 등록을 막는 것부터 함께 확인합니다.</p></div>
+  <div class="wcard rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#E35F2A" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h8"/></svg></div><div class="no">03</div><h3>진짜 들어가는 돈</h3><p>보증금·월세만이 아니라 부가세·관리비·권리금·공사 기간 월세까지 같이 계산합니다.</p></div>
+ </div>
+</div></section>
+
+<section class="s dark" id="guide"><div class="wrap">
+ <div class="head"><div><div class="eb rv">START-UP GUIDE</div><h2 class="rv">학원 창업,<br>계약 전에 확인할 것</h2></div><p class="lead rv">자리를 보는 순서대로 정리했습니다. 각 항목을 누르면 짧은 영상으로 바로 볼 수 있습니다.</p></div>
+ <div class="steps">
+  <div class="st rv"><div class="num"><b>STEP 01</b><i>01</i></div><h3>무엇으로 시작할까</h3><a href="https://youtube.com/shorts/PL0WvlPo-y0" target="_blank" rel="noopener">교습소 vs 학원, 뭐가 달라요?</a><a href="https://youtube.com/shorts/GBPVJS8Y8s8" target="_blank" rel="noopener">교습소는 넓으면 더 받을까?</a></div>
+  <div class="st rv"><div class="num"><b>STEP 02</b><i>02</i></div><h3>자리 보기</h3><a href="https://youtube.com/shorts/Zn3mRm4uces" target="_blank" rel="noopener">계약 전 건축물대장 용도부터</a><a href="https://youtube.com/shorts/lWP6KxGglJA" target="_blank" rel="noopener">같은 건물에 노래방이 있다면?</a></div>
+  <div class="st rv"><div class="num"><b>STEP 03</b><i>03</i></div><h3>돈 계산</h3><a href="https://youtube.com/shorts/TFYid9BcFZU" target="_blank" rel="noopener">창업 첫 달 비용, 월세만 보면 틀려요</a><a href="https://youtube.com/shorts/zP_ghlvz5J0" target="_blank" rel="noopener">권리금 0원, 무조건 이득일까?</a></div>
+  <div class="st rv"><div class="num"><b>STEP 04</b><i>04</i></div><h3>계약</h3><a href="https://youtube.com/shorts/KBmUSCl1Bf4" target="_blank" rel="noopener">계약서 도장 찍기 전 4가지</a></div>
+  <div class="st rv"><div class="num"><b>STEP 05</b><i>05</i></div><h3>공사</h3><a href="https://youtube.com/shorts/5KrIfPu3dGI" target="_blank" rel="noopener">인테리어 하기 전에 확인할 4가지</a></div>
+  <div class="st rv"><div class="num"><b>STEP 06</b><i>06</i></div><h3>등록</h3><a href="https://youtube.com/shorts/DZyVr9bcLxc" target="_blank" rel="noopener">빈 상가가 학원 되기까지 4단계</a><a href="https://youtube.com/shorts/ZC89fSHg-TQ" target="_blank" rel="noopener">등록 신청 때 챙길 서류·세금</a></div>
+ </div>
+ <p class="src rv">기준: 학원법·시행령, 부산광역시 학원 조례, 부산교육청·교육지원청 안내 (2026년 11월 기준). 세부 사항은 관할 교육지원청에 확인해 주세요.</p>
+</div></section>
+
+<section class="s" id="dayeon"><div class="wrap dy">
+ <div>
+  <div class="eb rv">SERIES</div>
+  <h2 class="rv">다연의<br>학원 차리기</h2>
+  <p class="lead rv" style="margin-top:20px">학원 자리를 처음 알아보는 다연이 묻고, 김실장이 답합니다. 1일차부터 차례로 보시면 학원 창업 흐름이 잡힙니다.</p>
+  <div class="ai rv"><span>ⓘ</span>다연은 AI로 만든 가상 인물이며, 실제 거래 후기가 아닙니다. 영상은 AI로 연출했습니다.</div>
+  <div class="rv" style="margin-top:28px"><a class="pill dark" href="https://www.youtube.com/@daeumgyosil" target="_blank" rel="noopener">유튜브 채널 전체 보기 ↗</a></div>
+ </div>
+ <div class="phones">
+  <div class="ph rv"><div class="scr"><span class="d">1일차</span><iframe loading="lazy" src="https://www.youtube.com/embed/1HgljJlsUDg" title="다연 1일차" allowfullscreen></iframe></div></div>
+  <div class="ph rv"><div class="scr"><span class="d">2일차</span><iframe loading="lazy" src="https://www.youtube.com/embed/JqHHU7VGHrE" title="다연 2일차" allowfullscreen></iframe></div></div>
+  <div class="ph rv"><div class="scr"><span class="d">3일차</span><iframe loading="lazy" src="https://www.youtube.com/embed/VRhoygljkPI" title="다연 3일차" allowfullscreen></iframe></div></div>
+  <div class="ph rv"><div class="scr"><span class="d">4일차</span><iframe loading="lazy" src="https://www.youtube.com/embed/8udUHEozOjU" title="다연 4일차" allowfullscreen></iframe></div></div>
+ </div>
+</div></section>
+
+<section class="s" id="process" style="background:var(--cream)"><div class="wrap">
+ <div class="head"><div><div class="eb rv">PROCESS</div><h2 class="rv">상담은 이렇게<br>진행됩니다</h2></div><p class="lead rv">자리 소개에서 끝나지 않고, 학원 등록까지 이어지는 순서로 안내합니다.</p></div>
+ <div class="proc">
+  <div class="pc rv"><div class="dot">01</div><div><h4>계획 듣기</h4><p>과목·학년·인원·예산·개원 시기</p></div></div>
+  <div class="pc rv"><div class="dot">02</div><div><h4>자리 찾기</h4><p>학원가·동선·층수에 맞는 후보</p></div></div>
+  <div class="pc rv"><div class="dot">03</div><div><h4>기준 확인</h4><p>건축물대장·교육청 기준 같이 보기</p></div></div>
+  <div class="pc rv"><div class="dot">04</div><div><h4>계약</h4><p>총비용 계산·특약 확인</p></div></div>
+  <div class="pc rv"><div class="dot">05</div><div><h4>등록까지</h4><p>공사·등록 순서 안내</p></div></div>
+ </div>
+</div></section>
+
+<div class="cta2 rv"><div class="in">
+ <h2>원장님 계획에 맞는 자리,<br>같이 찾아보세요.</h2>
+ <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="pill w" href="tel:01049838916">010-4983-8916</a><a class="pill b" href="https://blog.naver.com/kihyju1987" target="_blank" rel="noopener">블로그 매물 보기 ↗</a></div>
+</div></div>
+
+<footer><div class="wrap">
+ <div><b style="font-size:19px">다음교실</b> · 부산 학원·교습소 전문<br><br><b>포커스공인중개사무소</b> | 개업공인중개사 배재윤 | 등록번호 26260-2025-00040<br>부산 동래구 아시아드대로 227, 3층 | 소속공인중개사 김현주 010-4983-8916
+ <p class="sm">이 사이트의 가이드는 일반 안내이며 법률·세무 자문이 아닙니다. 매물 조건과 거래 가능 여부는 상담 때 다시 확인해 드립니다.</p></div>
+ <div class="links"><a href="https://blog.naver.com/kihyju1987" target="_blank" rel="noopener">네이버 블로그</a><a href="https://www.youtube.com/@daeumgyosil" target="_blank" rel="noopener">유튜브</a><a href="tel:01049838916">전화 상담</a></div>
+</div></footer>
+
+<div class="fl">
+ <a class="o" href="tel:01049838916" aria-label="전화"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+ <a href="https://blog.naver.com/kihyju1987" target="_blank" rel="noopener" aria-label="블로그"><svg viewBox="0 0 24 24" fill="none" stroke="#1F2B33" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></a>
+ <a href="https://www.youtube.com/@daeumgyosil" target="_blank" rel="noopener" aria-label="유튜브"><svg viewBox="0 0 24 24" fill="none" stroke="#1F2B33" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="#1F2B33"/></svg></a>
+</div>
+<script>
+const hd=document.getElementById('hd');addEventListener('scroll',()=>hd.classList.toggle('on',scrollY>30));
+const io=new IntersectionObserver(es=>{let k=0;es.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),(k++)*110);io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
